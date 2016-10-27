@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:autoLink="web"
+        android:text="http://android-er.blogspot.com/"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/namefield"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/addbutton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Add"/>
+
+        <RadioGroup
+            android:id="@+id/optGroupLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <RadioButton
+                android:id="@+id/optLinearLayoutVertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LinearLayout Vertical"
+                android:checked="true" />
+            <RadioButton
+                android:id="@+id/optLinearLayoutHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LinearLayout Horizontal" />
+            <RadioButton
+                android:id="@+id/optGridLayoutVertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GridLayout Vertical" />
+            <RadioButton
+                android:id="@+id/optGridLayoutHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GridLayout Horizontal" />
+            <RadioButton
+                android:id="@+id/optStaggeredGridLayoutVertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="StaggeredGridLayout Vertical" />
+            <RadioButton
+                android:id="@+id/optStaggeredGridLayoutHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="StaggeredGridLayout Horizontal" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/myrecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
